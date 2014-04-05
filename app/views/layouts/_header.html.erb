@@ -1,0 +1,23 @@
+
+<link rel="stylesheet" href="//wilkesalex.github.io/leapstrap/dist/css/leapstrap.css" />
+<!-- Include jQuery (maybe you already do?) -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+<!-- Include Leap (maybe you already do?) -->
+<script src="//js.leapmotion.com/0.3.0-beta3/leap.js"></script>
+<!-- Include Leapstrap JS -->
+<script src="//wilkesalex.github.io/leapstrap/dist/js/leapstrap.js"></script>
+
+<header class="navbar navbar-fixed-top navbar-inverse leap-interactive">
+      <div class="navbar-inner">
+        <div class="container ">
+          <nav>
+            <ul class="nav pull-right">
+              <li><%= link_to "DSKNL",    root_path %></li>
+              <li><%= link_to "PSKNR",    psknr_path %></li>                        
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+</header>
+<script>LeapManager.init({interactiveSelector:"a",maxCursors:1});</script>

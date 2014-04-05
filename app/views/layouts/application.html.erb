@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  
+  <%= csrf_meta_tags %>
+  <!-- Include Leapstrap CSS -->
+<link rel="stylesheet" href="//wilkesalex.github.io/leapstrap/dist/css/leapstrap.css" />
+<!-- Include jQuery (maybe you already do?) -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+<!-- Include Leap (maybe you already do?) -->
+<script src="//js.leapmotion.com/0.3.0-beta3/leap.js"></script>
+<!-- Include Leapstrap JS -->
+<script src="//wilkesalex.github.io/leapstrap/dist/js/leapstrap.js"></script>
+  
+</head>
+<body  class="leap-interactive" leap-disable-tap="true" leap-disable-hover="true">
+	
+	<%= render 'layouts/header' %>
+    </header>
+<div class="container">
+	<%= yield %>
+</div>
+
+<!-- Init Leap, Set all "a" interactive, use 1 Leap cursor/finger -->
+<script>LeapManager.init(
+	{interactiveSelector:"a",
+	enableMetaGestures: true,
+	enableDefaultMetaGesturesActions:true,
+	maxCursors:1,
+	enableTouchScrolling: false,
+    enableScrollbarScrolling: true,
+    enableHoverTap: true,
+    enablePressDown: true,
+	greedySelector: 'body'
+	});</script>
+
+</body>
+</html>

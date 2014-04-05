@@ -1,0 +1,839 @@
+<% provide(:title, 'PSKNR 3232P19')%>
+<div class="center hero-unit">
+	<h1><%=wititle(yield(:title)) %> </h1>
+	<p>
+		<img alt="Rails" src="/assets/PSKNRfinal.jpg" width="410" height="210">
+	</p>
+
+<ul class="nav nav-pills center-pills">
+		<li><%= link_to "Steg 1" , "#steg1"%></li>
+		<li><%= link_to "Steg 2" , "#steg2"%></li>
+		<li><%= link_to "Steg 3" , "#steg3"%></li>
+		<li><%= link_to "Steg 4" , "#steg4"%></li>
+		<li><%= link_to "Steg 5" , "#steg5"%></li>
+		<li><%= link_to "Steg 6" , "#steg6"%></li>
+		<li><%= link_to "Video" , "#videoinst"%></li>
+	</ul> 	 	
+		
+			
+</div>
+
+<div id="videoinst" class="hero-unit">
+	<center><h3> Video Instruktioner</h3></center>
+
+	<div class="row">
+		<div class="span12">
+			<div class="row">
+				
+				<div class="span4">
+					
+					
+					<ul>
+						
+						<li><a class="nav_link leap-interactive" onclick="playSection(3,21);">Steg 1: Skruv</a></li>
+						<li><a class="nav_link leap-interactive" onclick="playSection(23,43);">Steg 2: Hävarm</a></li>
+						<li><a class="nav_link leap-interactive" onclick="playSection(44,50);">Steg 3: Undersläggsplatta</a></li>
+						<li><a class="nav_link leap-interactive" onclick="playSection(51,92);">Steg 4: Rörstift</a></li>
+						<li><a class="nav_link leap-interactive" onclick="playSection(94,107);">Steg 5: Dummie (Blindskär)</a></li>
+						<li><a class="nav_link leap-interactive" onclick="playSection(109,126);">Steg 6: Bladmått</a></li>
+					</ul>
+					
+				</div>
+				<div class="span8">
+					<video id="vidstep1" width="420" height="440"  >
+					<source src="/assets/PSKNR_v3_2.mp4" type="video/mp4">
+             		<source src="/assets/PSKNR_v5.webm" type="video/webm">
+             		
+              		Your browser does not support the video tag.
+   					</video>
+   					<div id="video-controls" class="leap-interactive">
+   					<button type="button" class="btn btn-primary btn-xs leap-interactive" leap-enable-multitap="true" onclick="repeat('vidstep1');">
+    					<i id="reload1" class="icon-repeat icon-white"></i>
+    				</button>
+    				<button type="button" class="btn btn-primary btn-xs leap-interactive" leap-enable-multitap="true" onclick="playpause('play-pause1','vidstep1');">
+    					<i id="play-pause1" class="icon-play icon-white"></i>
+    				</button>
+    				<input type="range" id="seek-bar1" value="0" class="leap-interactive" onchange="seek('vidstep1');">
+    				<button type="button"  class="btn btn-primary btn-xs leap-interactive" leap-enable-multitap="true" onclick="muteonmute('mute1','vidstep1');">
+    					<i id="mute1" class="icon-volume-off icon-white"></i>
+    				</button>
+    				<input type="range" id="volume-bar1" min="0" max="1" step="0.1" value="1" class="leap-interactive" onchange="volume('volume-bar1','vidstep1');">
+    				<button type="button" class="btn btn-primary btn-xs leap-interactive" leap-enable-multitap="true" onclick="fullscrn('vidstep1');">
+    					<i class="icon-fullscreen icon-white"></i>
+    				</button>
+  					</div>
+   					
+				</div>
+			</div>
+		</div>
+	</div>
+	<ul class="nav nav-pills center-pills">
+		<li><%= link_to "Steg 1" , "#steg1"%></li>
+		<li><%= link_to "Steg 2" , "#steg2"%></li>
+		<li><%= link_to "Steg 3" , "#steg3"%></li>
+		<li><%= link_to "Steg 4" , "#steg4"%></li>
+		<li><%= link_to "Steg 5" , "#steg5"%></li>
+		<li><%= link_to "Steg 6" , "#steg6"%></li>
+		<li><%= link_to "Video" , "#videoinst"%></li>
+	</ul> 	 	
+	
+</div>
+
+<!-- STEP 1 -->
+<div id="steg1" class="center hero-unit">
+    
+    <h3>STEG 1: SKRUV </h3>
+    <div class="row">
+    	<div class="span12">
+    		<button id="buttextmat"  type="button" class="btn leap-interactive" leap-enable-multitap="true"  onclick="togglematerial('div_material1','buttextmat');">Visa material </button>
+  			<button id="buttexttool" type="button" class="btn leap-interactive" leap-enable-multitap="true"  onclick="toggletools('div_tools1', 'buttexttool');">Visa verktyg </button>
+    		<button id="buttontext" type="button" class="btn btn-large btn-primary btn-info leap-interactive"  leap-enable-multitap="true" onclick="toggleimagenovi('div_image1novi','div_image1exp','buttontext');">Visa instruktioner för Noviser </button>	
+    		<div class="row">
+    		<div id="div_material1" class="span6" hidden>
+    			<h2>Material</h2>
+    			 <img  src="/assets/PSKNR_skruv.jpg"  width="110" height="100">
+    		</div>
+    		<div id="div_tools1" class="span6" hidden>
+    			<h2>Verktyg</h2>
+    			<p> 
+    			 <img  src="/assets/PSKNR_tool_15.jpg"  width="110" height="80">  
+    			<img  src="/assets/PSKNR_tool_steg125.jpg"  width="110" height="80">   
+    			</p>
+    		</div>	
+    		</div>
+    		
+    	</div>
+    	
+    </div>
+    
+   
+    <div class="row-fluid">
+    	<div class="span12">
+    		  	
+    				
+    	</div>
+    </div>
+    
+    <div class="row-fluid">
+    	<div id="div_image1exp" style="display: block" class="span12">
+    		<h2>Instruktioner för Experter</h2>
+    		<p>
+    			<img  src="/assets/PSKNR_tighten_skruv_2.jpg"  width="410" height="100">
+    		</p>  
+    		
+    	</div>
+    </div>
+    
+    <div class="row-fluid">
+    	<div id="div_image1novi" style="display: none" class="span12">
+    		<h2>Instruktioner för Noviser</h2>
+    		<p>
+    			<img  src="/assets/PSKNR_p1.jpg"  width="410" height="300">
+    		</p>
+    		
+    		<p>
+    			<img  src="/assets/PSKNR_placing_skruv_1.jpg"  width="410" height="200">
+    		</p>
+    		
+    		<p>
+    			<img  src="/assets/PSKNR_tighten_skruv_2.jpg"  width="410" height="100">
+    		</p>  
+    			   	     				 
+    	</div>
+    </div>  
+    <ul class="nav nav-pills center-pills">
+		
+		<li><%= link_to "Steg 2" , "#steg2"%></li>
+		<li><%= link_to "Steg 3" , "#steg3"%></li>
+		<li><%= link_to "Steg 4" , "#steg4"%></li>
+		<li><%= link_to "Steg 5" , "#steg5"%></li>
+		<li><%= link_to "Steg 6" , "#steg6"%></li>
+		<li><%= link_to "Video" , "#videoinst"%></li>
+	</ul> 	 
+    
+</div>
+
+<!-- STEP 2 -->
+<div id="steg2" class="center hero-unit">
+    
+    <h3>STEG 2: HÄVARM </h3>
+    <div class="row">
+    	<div class="span12">
+    		<button id="buttextmat2"  type="button" class="btn leap-interactive" leap-enable-multitap="true"   onclick="togglematerial('div_material2', 'buttextmat2');">Visa material </button>
+  			<button id="buttexttool2" type="button" class="btn leap-interactive" leap-enable-multitap="true"   onclick="toggletools('div_tools2', 'buttexttool2');">Visa vektyg </button>
+    		<button id="buttontext2" type="button" class="btn btn-large btn-primary btn-info leap-interactive" leap-enable-multitap="true"  onclick="toggleimagenovi('div_image2novi','div_image2exp','buttontext2');">Visa instruktioner för Noviser </button>	
+      		<div class="row">
+    			<div id="div_material2" class="span6" hidden>
+    				<h2>Material</h2>
+    				<img  src="/assets/Havarm_PSKNR_p2.jpg"  width="110" height="100">
+    				
+    			</div>
+    			<div id="div_tools2" class="span6" hidden>
+    				<h2> Verktyg</h2>
+    				<img  src="/assets/PSKNR_tool_15.jpg"  width="110" height="80">
+    				<img  src="/assets/PSKNR_tool_steg125.jpg"  width="110" height="80">
+    			</div>
+    		</div>
+    	</div>
+    	
+    </div>
+    
+     <div class="row-fluid">
+    	<div class="span12">
+    		<h2>Tips</h2>
+    		<video id="vidstep2" width="420" height="340" >
+             		<source src="/assets/Haavarm.mp4" type="video/mp4">
+             		<source src="/assets/Haavarm.webm" type="video/webm">
+              		Your browser does not support the video tag.
+   					</video>
+   					<div id="video-controls" class="leap-interactive">
+   					<button type="button" class="btn btn-primary btn-xs leap-interactive" leap-enable-multitap="true" onclick="repeat('vidstep2');">
+    					<i id="reload" class="icon-repeat icon-white"></i>
+    				</button>
+    				<button type="button" class="btn btn-primary btn-xs leap-interactive" leap-enable-multitap="true" onclick="playpause('play-pause2','vidstep2');">
+    					<i id="play-pause2" class="icon-play icon-white"></i>
+    				</button>
+    				<input type="range" id="seek-bar2" value="0" class="leap-interactive" onchange="seek('vidstep2');">
+    				<button type="button"  class="btn btn-primary btn-xs leap-interactive" leap-enable-multitap="true" onclick="muteonmute('mute2','vidstep2');">
+    					<i id="mute2" class="icon-volume-off icon-white"></i>
+    				</button>
+    				<input type="range" id="volume-bar2" min="0" max="1" step="0.1" value="1" class="leap-interactive" onchange="volume('volume-bar2', 'vidstep2');">
+    				<button type="button"  class="btn btn-primary btn-xs leap-interactive" leap-enable-multitap="true" onclick="fullscrn('vidstep2');">
+    					<span class="icon-fullscreen icon-white"></span>
+    				</button>
+  					</div>		
+   					
+    	</div>
+    </div>
+    
+          
+    <div class="row-fluid">
+    	<div class="span12">
+    		  	
+    				
+    	</div>
+    </div>
+    
+   
+    
+    <div class="row-fluid">
+    	<div id="div_image2exp" style="display: block" class="span12">
+    		<h2>Instruktioner för Experter</h2>
+    		<p>
+    			<img  src="/assets/PSKNR_placing_havarm_4.jpg"  width="410" height="100">
+    			
+    		</p>  
+    		
+    	</div>
+    </div>
+    
+    <div class="row-fluid">
+    	<div id="div_image2novi" style="display: none" class="span12">
+    		<h2>Instruktioner för Noviser</h2>
+    		<p>
+    			<img  src="/assets/PSKNR_taking_havarm_1.jpg"  width="410" height="200">
+    		</p>
+    		
+    		<p>
+    			<img  src="/assets/PSKNR_placing_havarm_2.jpg"  width="410" height="200">
+    		</p>
+    		
+    		<p>
+    			<img  src="/assets/PSKNR_placing_havarm_3.jpg"  width="410" height="200">
+    		</p>  
+    		
+    		<p>
+    			<img  src="/assets/PSKNR_placing_havarm_4.jpg"  width="410" height="100">
+    		</p>  
+    			   	     				 
+    	</div>
+    </div>  
+    <ul class="nav nav-pills center-pills">
+		<li><%= link_to "Steg 1" , "#steg1"%></li>
+		
+		<li><%= link_to "Steg 3" , "#steg3"%></li>
+		<li><%= link_to "Steg 4" , "#steg4"%></li>
+		<li><%= link_to "Steg 5" , "#steg5"%></li>
+		<li><%= link_to "Steg 6" , "#steg6"%></li>
+		<li><%= link_to "Video" , "#videoinst"%></li>
+	</ul> 	 
+    
+</div>
+
+<!-- STEP 3 -->
+<div id="steg3" class="center hero-unit">
+    
+    <h3>STEG 3: UNDERLÄGGSPLATTA </h3>
+    <p>
+    <img  src="/assets/PSKNR_u-laggplatta.jpg"  width="110" height="100">
+    </p>
+    <div class="row-fluid">
+    	<div class="span12">
+    		<p>
+    			<button id="buttontext3" type="button" class="btn btn-large btn-primary btn-info leap-interactive" leap-enable-multitap="true"  onclick="toggleimagenovi('div_image3novi','div_image3exp','buttontext3');">Visa instruktioner för Noviser </button>	
+    		</p>  	
+    				
+    	</div>
+    </div>
+    
+    <div class="row-fluid">
+    	<div id="div_image3exp" style="display: block" class="span12">
+    		<h2>Instruktioner för Experter</h2>
+    		<p>
+    			<img  src="/assets/PSKNR_placing_u-laggsplatta_2.jpg"  width="410" height="100">
+    		</p>  
+    		
+    	</div>
+    </div>
+    
+    <div class="row-fluid">
+    	<div id="div_image3novi" style="display: none" class="span12">
+    		<h2>Instruktioner för Noviser</h2>
+    		<p>
+    			<img  src="/assets/PSKNR_taking_u-laggsplatta_1.jpg"  width="410" height="300">
+    		</p>
+    		
+    		<p>
+    			<img  src="/assets/PSKNR_placing_u-laggsplatta_2.jpg"  width="410" height="200">
+    		</p>
+    		
+    		
+    			   	     				 
+    	</div>
+    </div> 
+    <ul class="nav nav-pills center-pills">
+		<li><%= link_to "Steg 1" , "#steg1"%></li>
+		<li><%= link_to "Steg 2" , "#steg2"%></li>
+		
+		<li><%= link_to "Steg 4" , "#steg4"%></li>
+		<li><%= link_to "Steg 5" , "#steg5"%></li>
+		<li><%= link_to "Steg 6" , "#steg6"%></li>
+		<li><%= link_to "Video" , "#videoinst"%></li>
+		
+	</ul> 	 
+    
+</div>
+
+<!-- STEP 4 -->
+<div id="steg4" class="center hero-unit">
+    
+    <h3>STEG 4: RÖRSTIFT </h3>
+    <div class="row">
+    	<div class="span12">
+    		<button id="buttextmat3"  type="button" class="btn leap-interactive" leap-enable-multitap="true"  onclick="togglematerial('div_material3', 'buttextmat3');">Visa material </button>
+  			<button id="buttexttool3" type="button" class="btn leap-interactive" leap-enable-multitap="true"  onclick="toggletools('div_tools3', 'buttexttool3');">Visa verktyg </button>  		
+    		<button id="buttontext4" type="button" class="btn btn-large btn-primary btn-info leap-interactive" leap-enable-multitap="true"  onclick="toggleimagenovi('div_image4novi','div_image4exp','buttontext4');">Visa instruktioner för Noviser </button>	   		 
+    		<div class="row">
+    			<div id="div_material3" class="span3" hidden>
+    				<h2> Material</h2>
+    				<img  src="/assets/PSKNR_rorstift.jpg"  width="110" height="100">
+    			</div>
+    			<div id="div_tools3" class="span9" hidden>
+    				<h2>Verktyg</h2>
+    				<img  src="/assets/PSKNR_tool_steg4_1.jpg"  width="210" height="80">
+    				<img  src="/assets/PSKNR_tool_x.jpg"  width="110" height="80">
+    				<img  src="/assets/PSKNR_tool_steg4_2.jpg"  width="210" height="80">
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    
+    <div class="row-fluid">
+    	<div class="span12">
+    		<h2>Tips</h2>
+    		<video id="vidstep4" width="420" height="340" >
+             		<source src="/assets/Roorstift.mp4" type="video/mp4">
+             		<source src="/assets/Roorstift.webm" type="video/webm">
+              		Your browser does not support the video tag.
+   					</video>
+   					
+   			        <div id="video-controls" class="leap-interactive">
+   					<button type="button" class="btn btn-primary btn-xs leap-interactive" leap-enable-multitap="true" onclick="repeat('vidstep4');">
+    					<i id="reload" class="icon-repeat icon-white"></i>
+    				</button>
+    				<button type="button" class="btn btn-primary btn-xs leap-interactive" leap-enable-multitap="true" onclick="playpause('play-pause4','vidstep4');">
+    					<i id="play-pause4" class="icon-play icon-white"></i>
+    				</button>
+    				<input type="range" id="seek-bar4" value="0" class="leap-interactive" onchange="seek('vidstep4');">
+    				<button type="button"  class="btn btn-primary btn-xs leap-interactive" leap-enable-multitap="true" onclick="muteonmute('mute4', 'vidstpe4');">
+    					<span id="mute4" class="icon-volume-off icon-white"></span>
+    				</button>
+    				<input type="range" id="volume-bar4" min="0" max="1" step="0.1" value="1" class="leap-interactive" onchange="volume('volume-bar4', 'vidstep4');">
+    				<button type="button"  class="btn btn-primary btn-xs leap-interactive" leap-enable-multitap="true" onclick="fullscrn('vidstep4');">
+    					<span class="icon-fullscreen icon-white"></span>
+    				</button>
+  					</div>		
+    	</div>
+    </div>
+    
+    
+    
+    <div class="row-fluid">
+    	<div class="span12"> 	  				
+    	</div>
+    </div>
+    
+    <div class="row-fluid">
+    	<div id="div_image4exp" style="display: block" class="span12">
+    		<h2>Instruktioner för Experter</h2>
+    		<p>
+    			<img  src="/assets/PSKNR_hammering_rorstift_9.jpg"  width="410" height="100">
+    		</p>  
+    		
+    	</div>
+    </div>
+    
+    <div class="row-fluid">
+    	<div id="div_image4novi" style="display: none" class="span12">
+    		<h2>Instruktioner för Noviser</h2>
+    		<p>
+    			<img  src="/assets/PSKNR_taking_rorstift_tool_1.jpg"  width="410" height="300">
+    		</p>
+    		
+    		
+    		<p>
+    			<img  src="/assets/PSKNR_preparing_rorstift_3.jpg"  width="410" height="100">
+    		</p>
+    		<p>
+    			<img  src="/assets/PSKNR_placing_rorstift_4.jpg"  width="410" height="100">
+    		</p> 
+    		<p>
+    			<img  src="/assets/PSKNR_placing_rorstift_5.jpg"  width="410" height="100">
+    		</p> 
+    		<p>
+    			<img  src="/assets/PSKNR_placing_rorstift_6.jpg"  width="410" height="100">
+    		</p>  
+    		 
+    		<p>
+    			<img  src="/assets/PSKNR_hammer_rorstift_7.jpg"  width="410" height="100">
+    		</p>  
+    		
+    		<p>
+    			<img  src="/assets/PSKNR_placingtool_rorstift_8.jpg"  width="410" height="100">
+    		</p>  
+    		
+    		<p>
+    			<img  src="/assets/PSKNR_hammering_rorstift_9.jpg"  width="410" height="100">
+    		</p>  
+    			   	     				 
+    	</div>
+    </div>
+   <ul class="nav nav-pills center-pills">
+		<li><%= link_to "Steg 1" , "#steg1"%></li>
+		<li><%= link_to "Steg 2" , "#steg2"%></li>
+		<li><%= link_to "Steg 3" , "#steg3"%></li>
+		
+		<li><%= link_to "Steg 5" , "#steg5"%></li>
+		<li><%= link_to "Steg 6" , "#steg6"%></li>
+		<li><%= link_to "Video" , "#videoinst"%></li>
+	</ul> 	 
+   
+</div>
+
+<!-- STEP 5 -->
+<div id="steg5" class="center hero-unit">
+    
+    <h3>STEG 5: DUMMIE (BLINDSKÄR) </h3>
+    <div class="row">
+    	<div class="span12">
+    		<button id="buttextmat5"  type="button" class="btn leap-interactive" leap-enable-multitap="true"  onclick="togglematerial('div_material5', 'buttextmat5');">Visa material </button>
+  			<button id="buttexttool5" type="button" class="btn leap-interactive" leap-enable-multitap="true"  onclick="toggletools('div_tools5', 'buttexttools5');">Visa verktyg </button>
+    		<button id="buttontext5" type="button" class="btn btn-large btn-primary btn-info leap-interactive" leap-enable-multitap="true"  onclick="toggleimagenovi('div_image5novi','div_image5exp','buttontext5');">Visa instruktioner för Noviser </button>	
+    		<div class="row">
+    			<div id="div_material5" class="span6" hidden>
+    				<h2>Material</h2>
+    				<img  src="/assets/PSKNR_dummie(blindskar).jpg"  width="110" height="100">
+    			</div>
+    			<div id="div_tools5" class="span6" hidden>
+    				<h2>Verktyg</h2>
+    				<img  src="/assets/PSKNR_tool_15.jpg"  width="110" height="80">
+     				<img  src="/assets/PSKNR_tool_steg125.jpg"  width="110" height="80">
+    			</div>
+    		</div>
+    		
+    	</div>   	
+    </div>
+    
+    
+     
+   
+    <div class="row-fluid">
+    	<div class="span12">
+    		 	
+    				
+    	</div>
+    </div>
+    
+    <div class="row-fluid">
+    	<div id="div_image5exp" style="display: block" class="span12">
+    		<h2>Instruktioner för Experter</h2>
+    		<p>
+    			<img  src="/assets/PSKNR_drilling_skruv_dummie_5.jpg"  width="410" height="100">
+    		</p>  
+    		
+    	</div>
+    </div>
+    
+    <div class="row-fluid">
+    	<div id="div_image5novi" style="display: none" class="span12">
+    		<h2>Instruktioner för Noviser</h2>
+    		<p>
+    			<img  src="/assets/PSKNR_taking_dummie_1.jpg"  width="410" height="300">
+    		</p>
+    		
+    		<p>
+    			<img  src="/assets/PSKNR_placing_dummie_2.jpg"  width="410" height="200">
+    		</p>
+    		
+    		<p>
+    			<img  src="/assets/PSKNR_placing_dummie_3.jpg"  width="410" height="100">
+    		</p>  
+    		
+    		<p>
+    			<img  src="/assets/PSKNR_placingtool_dummie_4.jpg"  width="410" height="100">
+    		</p> 
+
+			<p>
+    			<img  src="/assets/PSKNR_drilling_skruv_dummie_5.jpg"  width="410" height="100">
+    		</p>  	     				 
+    	</div>
+    </div>  
+    <ul class="nav nav-pills center-pills">
+		<li><%= link_to "Steg 1" , "#steg1"%></li>
+		<li><%= link_to "Steg 2" , "#steg2"%></li>
+		<li><%= link_to "Steg 3" , "#steg3"%></li>
+		<li><%= link_to "Steg 4" , "#steg4"%></li>
+		
+		<li><%= link_to "Steg 6" , "#steg6"%></li>
+		<li><%= link_to "Video" , "#videoinst"%></li>
+	</ul> 	 
+   
+</div>
+
+
+
+<!-- STEP 6 -->
+<div id="steg6" class="center hero-unit">
+    
+    <h3>STEG 6: BLADMÅTT  </h3>
+    <p>
+    	<img  src="/assets/PSKNR_noair_tester.jpg"  width="110" height="100">
+    
+    </p>
+    <div class="row-fluid">
+    	<div class="span12">
+    		<p>
+    			<button id="buttontext6" type="button" class="btn btn-large btn-primary btn-info leap-interactive" leap-enable-multitap="true"  onclick="toggleimagenovi('div_image6novi','div_image6exp','buttontext6');">Visa instruktioner för Noviser </button>	
+    		</p>  	
+    				
+    	</div>
+    </div>
+    
+    <div class="row-fluid">
+    	<div id="div_image6exp" style="display: block" class="span12">
+    		<h2>Instruktioner för Experter</h2>
+    		<p>
+    			<img  src="/assets/PSKNR_noairtest_2.jpg"  width="410" height="100">
+    		</p>  
+    		
+    	</div>
+    </div>
+    
+    <div class="row-fluid">
+    	<div id="div_image6novi" style="display: none" class="span12">
+    		<h2>Instruktioner för Noviser</h2>
+    		<p>
+    			<img  src="/assets/PSKNR_noair_tool_1.jpg"  width="410" height="300">
+    		</p>
+    		
+    		<p>
+    			<img  src="/assets/PSKNR_noairtest_2.jpg"  width="410" height="200">
+    		</p>
+    		
+    		<p>
+    			<img  src="/assets/PSKNR_noairtest_3.jpg"  width="410" height="100">
+    		</p>      		     				 
+    	</div>
+    </div>  
+    <ul class="nav nav-pills center-pills">
+		<li><%= link_to "Steg 1" , "#steg1"%></li>
+		<li><%= link_to "Steg 2" , "#steg2"%></li>
+		<li><%= link_to "Steg 3" , "#steg3"%></li>
+		<li><%= link_to "Steg 4" , "#steg4"%></li>
+		<li><%= link_to "Steg 5" , "#steg5"%></li>
+		
+		<li><%= link_to "Video" , "#videoinst"%></li>
+	</ul> 	 
+</div>
+
+  
+  
+  
+ 
+  
+<script>
+
+var endtime1;
+
+var video1=document.getElementById('vidstep1'); 	
+var video2=document.getElementById('vidstep2'); 
+var video4=document.getElementById('vidstep4'); 
+
+//slides
+var seekBar1 = document.getElementById("seek-bar1");
+var seekBar2 = document.getElementById("seek-bar2");
+var seekBar4 = document.getElementById("seek-bar4");
+
+
+
+video1.addEventListener("timeupdate", pausavideo1, false);
+
+
+
+function playpause(playpause,vid){
+var playButton = document.getElementById(playpause);	
+if ( vid=='vidstep1') {
+	video=video1;
+} else{
+	if (vid=='vidstep2') {
+		video=video2;
+	} else{
+		if (vid=='vidstep4') {
+			video=video4;
+		};
+	};
+};
+
+if (video.paused == true) {
+    // Play the video
+    video.play();
+
+    // Update the button text to 'Pause'
+    playButton.className = "icon-pause icon-white";
+  } else {
+    // Pause the video
+    video.pause();
+
+    // Update the button text to 'Play'
+    playButton.className = "icon-play icon-white";
+  }
+ 
+}
+
+function repeat(vid) {
+if ( vid=='vidstep1') {
+	video=video1;
+} else{
+	if (vid=='vidstep2') {
+		video=video2;
+	} else{
+		if (vid=='vidstep4') {
+			video=video4;
+		};
+	};
+};
+	
+	video.currentTime=0; 
+}
+
+function muteonmute (mute,vid) {
+	
+var muteButton = document.getElementById(mute);
+if ( vid=='vidstep1') {
+	video=video1;
+} else{
+	if (vid=='vidstep2') {
+		video=video2;
+	} else{
+		if (vid=='vidstep4') {
+			video=video4;
+		};
+	};
+};
+
+
+  if (video.muted == false) {
+    // Mute the video
+    video.muted = true;
+
+    // Update the button text
+    muteButton.className = "icon-volume-up icon-white";
+  } else {
+    // Unmute the video
+    video.muted = false;
+
+    // Update the button text
+    muteButton.className = "icon-volume-off icon-white";
+  }
+}
+
+function fullscrn(vid){
+if ( vid=='vidstep1') {
+	video=video1;
+} else{
+	if (vid=='vidstep2') {
+		video=video2;
+	} else{
+		if (vid=='vidstep4') {
+			video=video4;
+		};
+	};
+};
+if (video.requestFullscreen) {
+  video.requestFullscreen();
+} else if (video.msRequestFullscreen) {
+  video.msRequestFullscreen();
+} else if (video.mozRequestFullScreen) {
+  video.mozRequestFullScreen();
+} else if (video.webkitRequestFullscreen) {
+  video.webkitRequestFullscreen();
+}
+}
+
+
+function seek(vid) {
+
+
+if ( vid=='vidstep1') {
+	video=video1;
+	seekBar=seekBar1;
+} else{
+	if (vid=='vidstep2') {
+		video=video2;
+		seekBar=seekBar2;
+	} else{
+		if (vid=='vidstep4') {
+			video=video4;
+			seekBar=seekBar4;
+		};
+	};
+};	
+	
+var time = video.duration * (seekBar.value / 100);
+
+  // Update the video time
+  video.currentTime = time;  
+}
+
+video1.addEventListener("timeupdate", function() {
+  // Calculate the slider value
+  var value = (100 / video1.duration) * video1.currentTime;
+
+  // Update the slider value
+  seekBar1.value = value;
+});
+
+video2.addEventListener("timeupdate", function() {
+  // Calculate the slider value
+  var value = (100 / video2.duration) * video2.currentTime;
+
+  // Update the slider value
+  seekBar2.value = value;
+});
+
+video4.addEventListener("timeupdate", function() {
+  // Calculate the slider value
+  var value = (100 / video4.duration) * video4.currentTime;
+
+  // Update the slider value
+  seekBar4.value = value;
+});
+
+function volume(volbar,vid) {
+if ( vid=='vidstep1') {
+	video=video1;
+	seekBar=seekBar1;
+} else{
+	if (vid=='vidstep2') {
+		video=video2;
+		seekBar=seekBar2;
+	} else{
+		if (vid=='vidstep4') {
+			video=video4;
+			seekBar=seekBar4;
+		};
+	};
+}	
+	
+var volumeBar = document.getElementById(volbar); 
+// Update the video volume
+  video.volume = volumeBar.value;
+  
+}
+
+
+
+
+function pausavideo1()
+{
+	
+    if (video1.currentTime >= endtime1) 
+    {
+      video1.pause(); 
+    } 
+
+}
+
+
+function playSection(start,stop)
+{ 
+
+    endtime1 = stop; 
+    video1.currentTime=start; 
+    video1.play();
+    
+}
+
+
+
+
+
+  
+function toggleimagenovi(idimage1novi,idimage1exp,buttext)
+{
+	var image1n=document.getElementById(idimage1novi);
+	var image1e=document.getElementById(idimage1exp);
+	var text = document.getElementById(buttext);
+	
+	if(image1n.style.display =="block"){
+		image1n.style.display="none";
+		image1e.style.display="block";
+		text.innerHTML = " Visa Instruktioner för Noviser";
+	}
+	else{
+		image1n.style.display="block";
+		image1e.style.display="none";
+		text.innerHTML = "Visa Instruktioner för Experter";
+	}
+	
+}
+
+function togglematerial(idmaterial,idtextmat)
+{
+	var textmat = document.getElementById(idtextmat);
+	var image=document.getElementById(idmaterial);
+	if(image.style.display =="block"){
+		image.style.display="none";
+		textmat.innerHTML = "Visa material";
+	}
+	else{
+		image.style.display="block";
+		textmat.innerHTML = "Dölja material";
+	}
+}
+
+function toggletools(idtools,idtexttool)
+{
+	var texttool = document.getElementById(idtexttool);
+	var image=document.getElementById(idtools);
+	if(image.style.display =="block"){
+		image.style.display="none";
+		texttool.innerHTML = "Visa verktyg"
+	}
+	else{
+		image.style.display="block";
+		texttool.innerHTML = "Dölja verktyg"
+	}
+}
+  	 
+  </script>

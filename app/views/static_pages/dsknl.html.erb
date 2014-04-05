@@ -1,0 +1,521 @@
+<% provide(:title, 'DSKNL 2525M12')%>
+<div class="center hero-unit leap-interactive">
+	<h1><%=wititle(yield(:title)) %> </h1>
+	<p>
+    	<img  src="/assets/DSKNL_final_5.jpg"  width="410" height="210">
+    </p> 
+    
+<ul class="nav nav-pills center-pills">
+		<li><%= link_to "Steg 1" , "#steg1"%></li>
+		<li><%= link_to "Steg 2" , "#steg2"%></li>
+		<li><%= link_to "Steg 3" , "#steg3"%></li>
+		<li><%= link_to "Steg 4" , "#steg4"%></li>
+		<li><%= link_to "Video" , "#videoinst"%></li>
+	</ul> 	      
+    		   		
+</div>
+
+
+<div id="videoinst" class="hero-unit leap-interactive" >
+	<center><h3> Video Instruktioner</h3></center>
+
+	<div class="row">
+		<div class="span12">
+			<div class="row">
+				
+				<div class="span4">
+					
+					<ul>
+						
+						<li><a class="nav_link leap-interactive" onclick="playSection1(3,31);">Steg 1: Undersläggsplatta och skruv</a></li>
+						<li><a class="nav_link leap-interactive" onclick="playSection1(32,59);">Steg 2: Stift och fjärder</a></li>
+						<li><a class="nav_link leap-interactive" onclick="playSection1(61,87);">Steg 3: Klamp och skruv</a></li>
+						<li><a class="nav_link leap-interactive" onclick="playSection1(90,108);">Steg 4: Bladmått</a></li>
+					</ul>
+					
+				</div>
+				<div class="span8">
+					
+					<video  id="vidstep1"  width="420" height="340" >
+             		<source src="/assets/DSKNL_v2_1.mp4" type="video/mp4">
+             		<source src="/assets/DSKNL_v2.webm" type="video/webm">
+              		Your browser does not support the video tag.
+   					</video>
+   					<div id="video-controls" class="leap-interactive">
+   					<button type="button" class="btn btn-primary btn-xs leap-interactive" leap-enable-multitap="true" onclick="repeat();">
+    					<i id="reload" class="icon-repeat icon-white"></i>
+    				</button>
+    				<button type="button" class="btn btn-primary btn-xs leap-interactive" leap-enable-multitap="true" onclick="playpause();">
+    					<i id="play-pause" class="icon-play icon-white"></i>
+    				</button>
+    				<input type="range" id="seek-bar" value="0" class="leap-interactive" onchange="seek();">
+    				<button type="button"  class="btn btn-primary btn-xs leap-interactive" leap-enable-multitap="true" onclick="muteonmute();">
+    					<i id="mute" class="icon-volume-off icon-white"></i>
+    				</button>
+    				<input type="range" id="volume-bar" min="0" max="1" step="0.1" value="1" class="leap-interactive" leap-enable-multitap="true" onchange="volume();">
+    				<button type="button"  class="btn btn-primary btn-xs leap-interactive" leap-enable-multitap="true" onclick="fullscrn();">
+    					<i class="icon-fullscreen icon-white"></i>
+    				</button>
+  					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<ul class="nav nav-pills center-pills">
+		<li><%= link_to "Steg 1" , "#steg1"%></li>
+		<li><%= link_to "Steg 2" , "#steg2"%></li>
+		<li><%= link_to "Steg 3" , "#steg3"%></li>
+		<li><%= link_to "Steg 4" , "#steg4"%></li>
+		<li><%= link_to "Video" , "#videoinst"%></li>
+	</ul> 	
+	
+</div>
+
+<!-- STEP 1 -->
+<div id="steg1" style="height:800px; overflow: scroll;" class="center hero-unit vertical leap-interactive"  leap-disable-tap="true">
+    
+    <h3>STEG 1: UNDERLÄGGSPLATTA OCH SKRUV </h3>
+    <div class="row">
+    	<div class="span12">
+    		<button id="buttextmat"  type="button" class="btn btn-default  leap-interactive " leap-enable-multitap="true"  onclick="togglematerial('div_material1','buttextmat');">Visa material </button>
+  			<button id="buttexttool" type="button" class="btn btn-default leap-interactive"  leap-enable-multitap="true"  onclick="toggletools('div_tools1', 'buttexttool');">Visa verktyg </button>
+  			
+    		<div class="row">
+    			<div id="div_material1" class="span6" hidden>
+    				<h2>Material</h2>
+    				 <img  src="/assets/DSKNL_Underlaggsplatta.jpg"  width="110" height="100">
+     				 <img  src="/assets/DSKNL_SkruvforUplatta.jpg"  width="110" height="100">
+    			</div>
+    			<div id="div_tools1" class="span6" hidden>
+    				<h2>Verktyg</h2>
+    				<img  src="/assets/DSKNL_tool_steg13.jpg"  width="110" height="100">
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    
+    <p>
+      
+    
+    
+    </p>
+    <div class="row-fluid">
+    	<div class="span12">
+    		<p>
+    			<button id="buttontext" type="button" class="btn btn-large btn-primary btn-info leap-interactive"  leap-enable-multitap="true" onclick="toggleimagenovi('div_image1novi','div_image1exp','buttontext');">Visa instruktioner för Noviser </button>	
+    		</p>  	
+    				
+    	</div>
+    </div>
+    
+    <div class="row-fluid">
+    	<div id="div_image1exp" style="display: block" class="span12">
+    		<h2>Instruktioner för Experter</h2>
+    		<p>
+    			<img  src="/assets/DSKNL_tighten_skruvUplatta_4.jpg"  width="410" height="200">
+    		</p>  
+    		
+    	</div>
+    </div>
+    
+    <div class="row-fluid">
+    	<div id="div_image1novi" style="display: none" class="span12">
+    		<h2>Instruktioner för Noviser</h2>
+    		<p>
+    			<img  src="/assets/DSKNL_taking_Uplatta_1.jpg"  width="410" height="300">
+    		</p>
+    		
+    		<p>
+    			<img  src="/assets/DSKNL_placing_Uplatta_2.jpg"  width="410" height="200">
+    		</p>
+    		
+    		<p>
+    			<img  src="/assets/DSKNL_taking_skruvUplatta_3.jpg"  width="410" height="200">
+    		</p>
+    		
+    		<p>
+    			<img  src="/assets/DSKNL_tighten_skruvUplatta_4.jpg"  width="410" height="200">
+    		</p>
+    			   	     				 
+    	</div>
+    </div>  
+    <ul class="nav nav-pills center-pills">
+		
+		<li><%= link_to "Steg 2" , "#steg2"%></li>
+		<li><%= link_to "Steg 3" , "#steg3"%></li>
+		<li><%= link_to "Steg 4" , "#steg4"%></li>
+		<li><%= link_to "Video" , "#videoinst"%></li>
+		
+	</ul> 	 
+    
+</div>
+
+<!-- STEP 2 -->
+<div id="steg2" style="height:600px; overflow: scroll;" class="center hero-unit leap-interactive" leap-disable-tap="true">
+    
+    <h3>STEG 2: STIFT OCH FJÄRDER </h3>
+    <div class="row">
+    	<div class="span12">
+    		<button id="buttextmat2"  type="button"class="btn btn-default  leap-interactive"  leap-enable-multitap="true"   onclick="togglematerial('div_material2', 'buttextmat2');">Visa material </button>
+  			<button id="buttexttool2" type="button"class="btn btn-default  leap-interactive"  leap-enable-multitap="true"  onclick="toggletools('div_tools2', 'buttexttool2');">Visa verktyg </button>
+    		<div class="row">
+    			<div id="div_material2" class="span6" hidden>
+    				<h2>Material</h2>
+    				<img  src="/assets/DSKNL_Klampsats_4.jpg"  width="110" height="100">
+    				<img  src="/assets/DSKNL_Klampsats_2.jpg"  width="110" height="100">
+    			</div>
+    			<div id="div_tools2" class="span6" hidden>
+    				<h2>Verktyg</h2>
+    				<img  src="/assets/PSKNR_tool_steg4_2.jpg"  width="210" height="80">
+    			</div>
+    		</div>
+    	</div>
+    </div>
+      
+    
+    
+    
+   
+    <div class="row-fluid">
+    	<div class="span12">
+    		<p>
+    			<button id="buttontext2" type="button" class="btn btn-large btn-primary btn-info leap-interactive"  leap-enable-multitap="true"  onclick="toggleimagenovi('div_image2novi','div_image2exp','buttontext2');">Visa instruktioner för Noviser </button>	
+    		</p>  	
+    				
+    	</div>
+    </div>
+    
+    <div class="row-fluid">
+    	<div id="div_image2exp" style="display: block" class="span12">
+    		<h2>Instruktioner för Experter</h2>
+    		<p>
+    			<img  src="/assets/DSKNL_placing_Klampsats_2_2.jpg"  width="410" height="100">
+    		</p>  
+    		
+    	</div>
+    </div>
+    
+    <div class="row-fluid">
+    	<div id="div_image2novi" style="display: none" class="span12">
+    		<h2>Instruktioner för Noviser</h2>
+    		<p>
+    			<img  src="/assets/DSKNL_taking_Klampsats_4_1.jpg"  width="410" height="300">
+    		</p>
+    		
+    		<p>
+    			<img  src="/assets/DSKNL_placing_Klampsats_4_2.jpg"  width="410" height="300">
+    		</p>
+    		
+    		<p>
+    			<img  src="/assets/DSKNL_hammering_Klampsats_4_3.jpg"  width="410" height="300">
+    		</p> 
+    		
+    		<p>
+    			<img  src="/assets/DSKNL_placing_Klampsats_2_1.jpg"  width="410" height="300">
+    		</p> 
+    			   	     				 
+    	</div>
+    </div>  
+    <ul class="nav nav-pills center-pills">
+		<li><%= link_to "Steg 1" , "#steg1"%></li>
+		
+		<li><%= link_to "Steg 3" , "#steg3"%></li>
+		<li><%= link_to "Steg 4" , "#steg4"%></li>
+		<li><%= link_to "Video" , "#videoinst"%></li>
+	</ul> 	 
+    
+</div>
+
+
+<!-- STEP 3 -->
+<div id="steg3"  style="height:600px; overflow: scroll;" class="center hero-unit leap-interactive" leap-disable-tap="true">
+    
+    <h3>STEG 3: KLAMP OCH SKRUV </h3>
+    <div class="row">
+    	<div class="span12">
+    		<button id="buttextmat3"  type="button" class="btn btn-default  leap-interactive"  leap-enable-multitap="true"  onclick="togglematerial('div_material3', 'buttextmat3');">Visa material </button>
+  			<button id="buttexttool3" type="button" class="btn btn-default  leap-interactive"  leap-enable-multitap="true"  onclick="toggletools('div_tools3','buttexttool3');">Visa verktyg </button>
+    		<div class="row">
+    			<div id="div_material3" class="span6" hidden>
+    				<h2>Material</h2>
+    				<img  src="/assets/DSKNL_Klampsats_3.jpg"  width="110" height="80">
+    			    <img  src="/assets/DSKNL_Klampsats_1.jpg"  width="150" height="100">
+    			</div>
+    			 
+    			<div id="div_tools3" class="span6" hidden>
+    				<h2>Verktyg</h2>
+    				<img  src="/assets/DSKNL_tool_steg13.jpg"  width="110" height="100">
+    			</div>
+    		</div>
+    	</div>
+    </div>
+  
+    <div class="row-fluid">
+    	<div class="span12">
+    		<p>
+    			<button id="buttontext3" type="button" class="btn btn-large btn-primary btn-info leap-interactive"  leap-enable-multitap="true"  onclick="toggleimagenovi('div_image3novi','div_image3exp','buttontext3');">Visa instruktioner för Noviser </button>	
+    		</p>  	
+    				
+    	</div>
+    </div>
+    
+    <div class="row-fluid">
+    	<div id="div_image3exp" style="display: block" class="span12">
+    		<h2>Instruktioner för Experter</h2>
+    		<p>
+    			<img  src="/assets/DSKNL_final_5.jpg"  width="410" height="100">
+    		</p>  
+    		
+    	</div>
+    </div>
+    
+    <div class="row-fluid">
+    	<div id="div_image3novi" style="display: none" class="span12">
+    		<h2>Instruktioner för Noviser</h2>
+    		<p>
+    			<img  src="/assets/DSKNL_taking_Klampsats_3_and_1_1.jpg"  width="410" height="300">
+    		</p>
+    		
+    		<p>
+    			<img  src="/assets/DSKNL_placing_Klampsats3_into_Klampsats1_2.jpg"  width="410" height="300">
+    		</p>
+    		
+    		<p>
+    			<img  src="/assets/DSKNL_placing_Klampsats31_3.jpg"  width="410" height="300">
+    		</p> 
+    		
+    		<p>
+    			<img  src="/assets/DSKNL_tighten_Klampsats31_4.jpg"  width="410" height="300">
+    		</p> 
+    		
+    		<p>
+    			<img  src="/assets/DSKNL_final_5.jpg"  width="410" height="300">
+    		</p>
+    			   	     				 
+    	</div>
+    </div>  
+    <ul class="nav nav-pills center-pills">
+		<li><%= link_to "Steg 1" , "#steg1"%></li>
+		<li><%= link_to "Steg 2" , "#steg2"%></li>
+		
+		<li><%= link_to "Steg 4" , "#steg4"%></li>
+		<li><%= link_to "Video" , "#videoinst"%></li>
+	</ul> 	 
+    
+</div>
+
+<!-- STEP 4 -->
+<div id="steg4"  style="height:800px; overflow: scroll;" class="center hero-unit leap-interactive" leap-disable-tap="true">
+    
+    <h3>STEG 4: BLADMÅTT </h3>
+    
+    <p>
+    <img  src="/assets/PSKNR_noair_tester.jpg"  width="110" height="100">        
+    </p>
+    
+    <div class="row-fluid">
+    	<div class="span12">
+    		<p>
+    			<button id="buttontext4" type="button" class="btn btn-large btn-primary btn-info leap-interactive"  leap-enable-multitap="true"  onclick="toggleimagenovi('div_image4novi','div_image4exp','buttontext4');">Visa instruktioner för Noviser </button>	
+    		</p>  	
+    				
+    	</div>
+    </div>
+    
+    <div class="row-fluid">
+    	<div id="div_image4exp" style="display: block" class="span12">
+    		<h2>Instruktioner för Experter</h2>
+    		<p>
+    			<img  src="/assets/DSKNL_noairtest_1.jpg"  width="410" height="100">
+    		</p>  
+    		
+    	</div>
+    </div>
+    
+    <div class="row-fluid">
+    	<div id="div_image4novi" style="display: none" class="span12">
+    		<h2>Instruktioner för Noviser</h2>
+    		<p>
+    			<img  src="/assets/DSKNL_noairtest_1.jpg"  width="410" height="300">
+    		</p>
+    		
+    		<p>
+    			<img  src="/assets/DSKNL_noairtest_2.jpg"  width="410" height="300">
+    		</p>
+    		
+    		  				 
+    	</div>
+    </div>  
+    <ul class="nav nav-pills center-pills">
+		<li><%= link_to "Steg1" , "#steg1"%></li>
+		<li><%= link_to "Steg2" , "#steg2"%></li>
+		<li><%= link_to "Steg3" , "#steg3"%></li>
+		
+		<li><%= link_to "Video" , "#videoinst"%></li>
+	</ul> 	 
+    
+</div>
+
+
+<script>
+
+
+var endtime1;
+
+var video1=document.getElementById('vidstep1'); 	
+
+  
+ 
+
+  // Sliders
+  var seekBar = document.getElementById("seek-bar");
+  var volumeBar = document.getElementById("volume-bar"); 
+
+video1.addEventListener("timeupdate", pausavideo1, false);
+
+
+function playpause(){
+var playButton = document.getElementById("play-pause");	
+
+if (video1.paused == true) {
+    // Play the video
+    video1.play();
+
+    // Update the button text to 'Pause'
+    playButton.className = "icon-pause icon-white";
+  } else {
+    // Pause the video
+    video1.pause();
+
+    // Update the button text to 'Play'
+    playButton.className = "icon-play icon-white";
+  }
+ 
+}
+
+function muteonmute () {
+var muteButton = document.getElementById("mute");
+  if (video1.muted == false) {
+    // Mute the video
+    video1.muted = true;
+
+    // Update glyphicon
+    muteButton.className = "icon-volume-up icon-white";
+  } else {
+    // Unmute the video
+    video1.muted = false;
+
+    // Update glyphicon
+    muteButton.className = "icon-volume-off icon-white";
+  }
+}
+  
+function fullscrn(){
+if (video1.requestFullscreen) {
+  video1.requestFullscreen();
+} else if (video1.msRequestFullscreen) {
+  video1.msRequestFullscreen();
+} else if (video1.mozRequestFullScreen) {
+  video1.mozRequestFullScreen();
+} else if (video1.webkitRequestFullscreen) {
+  video1.webkitRequestFullscreen();
+}
+}
+
+function seek() {
+var time = video1.duration * (seekBar.value / 100);
+
+  // Update the video time
+  video1.currentTime = time;  
+}
+
+
+// Update the seek bar as the video plays
+video1.addEventListener("timeupdate", function() {
+  // Calculate the slider value
+  var value = (100 / video1.duration) * video1.currentTime;
+
+  // Update the slider value
+  seekBar.value = value;
+});
+
+function volume() {
+ 
+// Update the video volume
+  video1.volume = volumeBar.value;
+  
+}
+
+function repeat() {
+	video1.currentTime=0;
+  
+}
+
+function pausavideo1()
+{
+	
+    if (video1.currentTime >= endtime1) 
+    {
+      video1.pause(); 
+    } 
+
+}
+
+
+function playSection1(start,stop)
+{ 
+
+    endtime1 = stop; 
+    video1.currentTime=start; 
+    video1.play();
+    
+}
+
+  
+function toggleimagenovi(idimage1novi,idimage1exp,buttext)
+{
+	var image1n=document.getElementById(idimage1novi);
+	var image1e=document.getElementById(idimage1exp);
+	var text = document.getElementById(buttext);
+	
+	if(image1n.style.display =="block"){
+		image1n.style.display="none";
+		image1e.style.display="block";
+		text.innerHTML = " Visa Instruktioner för Noviser";
+	}
+	else{
+		image1n.style.display="block";
+		image1e.style.display="none";
+		text.innerHTML = "Visa Instruktioner for Experter";
+	}
+	
+}
+function togglematerial(idmaterial,idtextmat)
+{
+	var textmat = document.getElementById(idtextmat);
+	var image=document.getElementById(idmaterial);
+	if(image.style.display =="block"){
+		image.style.display="none";
+		textmat.innerHTML = "Visa material";
+	}
+	else{
+		image.style.display="block";
+		textmat.innerHTML = "Dölja material";
+	}
+}
+
+function toggletools(idtools,idtexttool)
+{
+	var texttool = document.getElementById(idtexttool);
+	var image=document.getElementById(idtools);
+	if(image.style.display =="block"){
+		image.style.display="none";
+		texttool.innerHTML = "Visa verktyg"
+	}
+	else{
+		image.style.display="block";
+		texttool.innerHTML = "Dölja verktyg"
+	}
+}
+  	 
+  </script>
