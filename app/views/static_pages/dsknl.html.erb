@@ -5,7 +5,7 @@
     	<img  src="/assets/DSKNL_final_5.jpg"  width="410" height="210">
     </p> 
     
-<ul class="nav nav-pills center-pills">
+<ul id="steps" class="nav nav-pills center-pills">
 		<li><%= link_to "Steg 1" , "#steg1"%></li>
 		<li><%= link_to "Steg 2" , "#steg2"%></li>
 		<li><%= link_to "Steg 3" , "#steg3"%></li>
@@ -23,7 +23,7 @@
 		<div class="span12">
 			<div class="row">
 				
-				<div class="span4">
+				<div id="chapters" class="span4">
 					
 					<ul>
 						
@@ -36,9 +36,11 @@
 				</div>
 				<div class="span8">
 					
-					<video  id="vidstep1"  width="420" height="340" >
-             		<source src="/assets/DSKNL_v2_1.mp4" type="video/mp4">
-             		<source src="/assets/DSKNL_v2.webm" type="video/webm">
+					<video  id="vidstep1"  width="420" height="340" preload="auto" >
+					<source src="/assets/DSKNL_v2_1_1.mp4" type="video/mp4" media=" screen and (max-width: 480px)">
+             		<source src="/assets/DSKNL_v2_1.mp4" type="video/mp4" media=" screen and (min-width: 900px)">
+             		<source src="/assets/DSKNL_v2.webm" type="video/webm" media=" screen and (min-width: 900px)">
+             			<source src="/assets/DSKNL_v2_1_1.webm" type="video/webm" media=" screen and (max-width: 480px)">
               		Your browser does not support the video tag.
    					</video>
    					<div id="video-controls" class="leap-interactive">
@@ -61,13 +63,16 @@
 			</div>
 		</div>
 	</div>
-	<ul class="nav nav-pills center-pills">
+	<center>
+		<ul id="steps" class="nav nav-pills center-pills">
 		<li><%= link_to "Steg 1" , "#steg1"%></li>
 		<li><%= link_to "Steg 2" , "#steg2"%></li>
 		<li><%= link_to "Steg 3" , "#steg3"%></li>
 		<li><%= link_to "Steg 4" , "#steg4"%></li>
 		<li><%= link_to "Video" , "#videoinst"%></li>
 	</ul> 	
+	</center>
+	
 	
 </div>
 
@@ -139,7 +144,7 @@
     			   	     				 
     	</div>
     </div>  
-    <ul class="nav nav-pills center-pills">
+    <ul id="steps" class="nav nav-pills center-pills">
 		
 		<li><%= link_to "Steg 2" , "#steg2"%></li>
 		<li><%= link_to "Steg 3" , "#steg3"%></li>
@@ -216,7 +221,7 @@
     			   	     				 
     	</div>
     </div>  
-    <ul class="nav nav-pills center-pills">
+    <ul id="steps" class="nav nav-pills center-pills">
 		<li><%= link_to "Steg 1" , "#steg1"%></li>
 		
 		<li><%= link_to "Steg 3" , "#steg3"%></li>
@@ -294,7 +299,7 @@
     			   	     				 
     	</div>
     </div>  
-    <ul class="nav nav-pills center-pills">
+    <ul id="steps" class="nav nav-pills center-pills">
 		<li><%= link_to "Steg 1" , "#steg1"%></li>
 		<li><%= link_to "Steg 2" , "#steg2"%></li>
 		
@@ -346,13 +351,16 @@
     		  				 
     	</div>
     </div>  
-    <ul class="nav nav-pills center-pills">
+    <center>
+    	<ul id="steps" class="nav nav-pills center-pills">
 		<li><%= link_to "Steg1" , "#steg1"%></li>
 		<li><%= link_to "Steg2" , "#steg2"%></li>
 		<li><%= link_to "Steg3" , "#steg3"%></li>
 		
 		<li><%= link_to "Video" , "#videoinst"%></li>
 	</ul> 	 
+    </center>
+    
     
 </div>
 

@@ -10,10 +10,14 @@
 <header class="navbar navbar-fixed-top navbar-inverse leap-interactive">
       <div class="navbar-inner">
         <div class="container ">
+        	<p>
+        		<%=wititle(yield(:title)) %>
+        	</p>
+        	
           <nav>
             <ul class="nav pull-right">
               <li><%= link_to "DSKNL",    root_path %></li>
-              <li><%= link_to "PSKNR",    psknr_path %></li>                        
+              <li><%= link_to "PSKNR",    psknr_path %></li>                      
             </ul>
           </nav>
         </div>

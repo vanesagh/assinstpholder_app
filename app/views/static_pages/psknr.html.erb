@@ -5,7 +5,7 @@
 		<img alt="Rails" src="/assets/PSKNRfinal.jpg" width="410" height="210">
 	</p>
 
-<ul class="nav nav-pills center-pills">
+<ul id="steps" class="nav nav-pills center-pills">
 		<li><%= link_to "Steg 1" , "#steg1"%></li>
 		<li><%= link_to "Steg 2" , "#steg2"%></li>
 		<li><%= link_to "Steg 3" , "#steg3"%></li>
@@ -18,35 +18,38 @@
 			
 </div>
 
+
 <div id="videoinst" class="hero-unit">
 	<center><h3> Video Instruktioner</h3></center>
 
 	<div class="row">
 		<div class="span12">
-			<div class="row">
-				
-				<div class="span4">
-					
-					
-					<ul>
-						
-						<li><a class="nav_link leap-interactive" onclick="playSection(3,21);">Steg 1: Skruv</a></li>
+			<div class="row">				
+				<div id="chapters" class="span4">									
+					<ul>						
+						<li ><a class="nav_link leap-interactive" onclick="playSection(3,21);">Steg 1: Skruv</a></li>
 						<li><a class="nav_link leap-interactive" onclick="playSection(23,43);">Steg 2: Hävarm</a></li>
 						<li><a class="nav_link leap-interactive" onclick="playSection(44,50);">Steg 3: Undersläggsplatta</a></li>
 						<li><a class="nav_link leap-interactive" onclick="playSection(51,92);">Steg 4: Rörstift</a></li>
 						<li><a class="nav_link leap-interactive" onclick="playSection(94,107);">Steg 5: Dummie (Blindskär)</a></li>
 						<li><a class="nav_link leap-interactive" onclick="playSection(109,126);">Steg 6: Bladmått</a></li>
-					</ul>
-					
+					</ul>					
 				</div>
+				
+					
+				
+				
 				<div class="span8">
-					<video id="vidstep1" width="420" height="440"  >
-					<source src="/assets/PSKNR_v3_2.mp4" type="video/mp4">
-             		<source src="/assets/PSKNR_v5.webm" type="video/webm">
-             		
-              		Your browser does not support the video tag.
-   					</video>
-   					<div id="video-controls" class="leap-interactive">
+					<center>
+						<video id="vidstep1" width="420" height="440" preload="auto"  >
+						<source src="/assets/PSKNR_v3_2.mp4" type="video/mp4" media=" screen and (min-width: 900px)">
+						<source src="/assets/PSKNR_v3_2_1.mp4" type="video/mp4" media=" screen and (max-width: 480px)">
+             			<source src="/assets/PSKNR_v5.webm" type="video/webm" media=" screen and (min-width: 900px)">  
+             			<source src="/assets/PSKNR_v3_2_1.webm" type="video/webm" media=" screen and (max-width: 480px)">>           		
+              			Your browser does not support the video tag.
+   						</video>
+   						
+   						<div id="video-controls" class="leap-interactive">
    					<button type="button" class="btn btn-primary btn-xs leap-interactive" leap-enable-multitap="true" onclick="repeat('vidstep1');">
     					<i id="reload1" class="icon-repeat icon-white"></i>
     				</button>
@@ -62,12 +65,17 @@
     					<i class="icon-fullscreen icon-white"></i>
     				</button>
   					</div>
+					</center>
+					
+   					
+   					
    					
 				</div>
 			</div>
 		</div>
-	</div>
-	<ul class="nav nav-pills center-pills">
+	<div  class="row">
+		<div  class="span12">
+		<ul id="steps"  class="nav nav-pills center-pills">
 		<li><%= link_to "Steg 1" , "#steg1"%></li>
 		<li><%= link_to "Steg 2" , "#steg2"%></li>
 		<li><%= link_to "Steg 3" , "#steg3"%></li>
@@ -75,7 +83,18 @@
 		<li><%= link_to "Steg 5" , "#steg5"%></li>
 		<li><%= link_to "Steg 6" , "#steg6"%></li>
 		<li><%= link_to "Video" , "#videoinst"%></li>
-	</ul> 	 	
+	</ul> 	 		
+		</div>
+	</div>
+	</div>
+	
+	
+
+ 
+  
+	
+	
+	
 	
 </div>
 
@@ -141,7 +160,7 @@
     			   	     				 
     	</div>
     </div>  
-    <ul class="nav nav-pills center-pills">
+    <ul id="steps" class="nav nav-pills center-pills">
 		
 		<li><%= link_to "Steg 2" , "#steg2"%></li>
 		<li><%= link_to "Steg 3" , "#steg3"%></li>
@@ -181,9 +200,11 @@
      <div class="row-fluid">
     	<div class="span12">
     		<h2>Tips</h2>
-    		<video id="vidstep2" width="420" height="340" >
-             		<source src="/assets/Haavarm.mp4" type="video/mp4">
-             		<source src="/assets/Haavarm.webm" type="video/webm">
+    		<video id="vidstep2" width="420" height="340" preload="auto" >
+             		<source src="/assets/Haavarm.mp4" type="video/mp4" media=" screen and (min-width: 900px)">
+             		<source src="/assets/Haavarm_1.mp4" type="video/mp4" media=" screen and (max-width: 480px)">	
+             		<source src="/assets/Haavarm.webm" type="video/webm" media=" screen and (min-width: 900px)">
+             		<source src="/assets/Haavarm_1.webm" type="video/webm" media=" screen and (max-width: 480px)">	
               		Your browser does not support the video tag.
    					</video>
    					<div id="video-controls" class="leap-interactive">
@@ -248,7 +269,7 @@
     			   	     				 
     	</div>
     </div>  
-    <ul class="nav nav-pills center-pills">
+    <ul id="steps" class="nav nav-pills center-pills">
 		<li><%= link_to "Steg 1" , "#steg1"%></li>
 		
 		<li><%= link_to "Steg 3" , "#steg3"%></li>
@@ -301,7 +322,7 @@
     			   	     				 
     	</div>
     </div> 
-    <ul class="nav nav-pills center-pills">
+    <ul id="steps" class="nav nav-pills center-pills">
 		<li><%= link_to "Steg 1" , "#steg1"%></li>
 		<li><%= link_to "Steg 2" , "#steg2"%></li>
 		
@@ -341,9 +362,11 @@
     <div class="row-fluid">
     	<div class="span12">
     		<h2>Tips</h2>
-    		<video id="vidstep4" width="420" height="340" >
-             		<source src="/assets/Roorstift.mp4" type="video/mp4">
-             		<source src="/assets/Roorstift.webm" type="video/webm">
+    		<video id="vidstep4" width="420" height="340" preload="auto" >
+             		<source src="/assets/Roorstift.mp4" type="video/mp4" media=" screen and (min-width: 900px)">
+             		<source src="/assets/Roorstift_1.mp4" type="video/mp4" media=" screen and (max-width: 480px)">
+             		<source src="/assets/Roorstift.webm" type="video/webm" media=" screen and (min-width: 900px)">
+             		<source src="/assets/Roorstift_1.webm" type="video/webm" media=" screen and (max-width: 480px)">
               		Your browser does not support the video tag.
    					</video>
    					
@@ -418,7 +441,7 @@
     			   	     				 
     	</div>
     </div>
-   <ul class="nav nav-pills center-pills">
+   <ul id="steps" class="nav nav-pills center-pills">
 		<li><%= link_to "Steg 1" , "#steg1"%></li>
 		<li><%= link_to "Steg 2" , "#steg2"%></li>
 		<li><%= link_to "Steg 3" , "#steg3"%></li>
@@ -498,7 +521,7 @@
     		</p>  	     				 
     	</div>
     </div>  
-    <ul class="nav nav-pills center-pills">
+    <ul id="steps" class="nav nav-pills center-pills">
 		<li><%= link_to "Steg 1" , "#steg1"%></li>
 		<li><%= link_to "Steg 2" , "#steg2"%></li>
 		<li><%= link_to "Steg 3" , "#steg3"%></li>
@@ -555,7 +578,7 @@
     		</p>      		     				 
     	</div>
     </div>  
-    <ul class="nav nav-pills center-pills">
+    <ul id="steps" class="nav nav-pills center-pills">
 		<li><%= link_to "Steg 1" , "#steg1"%></li>
 		<li><%= link_to "Steg 2" , "#steg2"%></li>
 		<li><%= link_to "Steg 3" , "#steg3"%></li>
